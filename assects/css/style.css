@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&family=Rubik:wght@300;400;500&display=swap');
+/* [table of contents]
+
+1. gloable style
+
+2. typography
+
+3. components
+    3.1 buttons
+    3.2 section
+    3.3 cards
+ */
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -5,10 +20,103 @@
 }
 
 :root {
-    --primary-color: rgb(135, 207, 195);
+    --primary-color: rgb(178, 214, 208);
 }
 
+/* ----------------
+    gloable style
+---------------- */
 html,
 body {
+    font-family: 'Lato', sans-serif;
+    /* font-family: 'Rubik', sans-serif; */
+    /* background-color: var(--primary-color); */
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr minmax(40ch, 160ch) 1fr;
+}
+
+.hero {
+    grid-column: 2/3;
     background-color: var(--primary-color);
+    padding: 1em;
+    /* margin: 1em; */
+}
+
+.hero,
+span,
+section {
+    grid-column: 2/3;
+}
+
+/* ----------------
+    typography
+---------------- */
+h1,
+h2 {
+    font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+    font-size: 3.4em;
+    font-weight: 500;
+    color: azure;
+    padding: .2em;
+}
+
+h2 {
+    font-size: 2em;
+    padding: 1em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.hero-content {
+    padding: 1em 2em;
+    /* background-color: blueviolet; */
+    text-align: center;
+
+}
+
+span {
+    text-align: center;
+    /* background-color: tomato; */
+    padding: 1em;
+}
+
+/* ----------------
+    buttons
+---------------- */
+button {
+    font-size: 1.4em;
+    margin: 2em 1em 1em 1em;
+    padding: 10px 26px;
+    width: 200px;
+    font-weight: bold;
+    color: white;
+    background-color: #fa7a60;
+    border: none;
+    border-radius: 6px;
+}
+
+
+/* ----------------
+    section
+---------------- */
+section {
+    margin: 2em 0;
+}
+
+/* ----------------
+    cards
+---------------- */
+.card {
+    background-color: turquoise;
+    padding: 2em;
+    margin: 1em;
+    border-radius: 4px;
 }
